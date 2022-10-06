@@ -1,0 +1,400 @@
+/* Screen CSS Document */
+* {padding:0; margin:0; font-size:100%;}
+.hidden, hr, .neviditelny {display:none;} /* neviditelny je na vyskakovaci prvky, predelat */
+.cleaner {clear:both; height:1px;margin: -1px 0 0 0; padding:0;border:none;visibility: hidden;display:block !important;font-size:1px; line-height:1px;}
+.left {text-align: left;}
+.right {text-align: right;}
+.center {text-align: center;}
+.zvyrazni{font-weight: bold}
+.blink-red{color: red !important; text-decoration: blink; font-weight: bold}
+.blink-bold {text-decoration: blink; font-weight: bold}
+.cursive-red{color: red !important; color: blue; font-style: italic}
+acronym {border-bottom: 1px dotted;cursor: help;}
+
+/* globalni vlastnosti
+******************************/
+body, input, textarea {font-family:Tahoma, "Lucida Grande CE", lucida, sans-serif; }
+
+body {text-align:center; background:#333 url('gfx/try.png') center top; color:#fff;}
+#vertical-grad {height:320px; background#FFF url('gfx/body_vert_grad.png') center top repeat-x;}
+
+#all {padding:8px 0 0 0;}
+#all-in {text-align:left; width:1000px; margin:0 auto; background:url('gfx/body.png') left top repeat-y;  position:relative; min-height:880px;}
+#all{padding-top:0px;} /*NOV�!!! - takhle je skryt� topline! pokud chci zobrazit topline, tak all padding-top nastavit na hodnotu=fixed_panel height, v tomto p��pad� 35px; viz p��kazy na konci souboru*/
+
+#topline {display:block; margin:0px 20px; height:35px; overflow:hidden;
+          background:#003125 url('gfx/topline.png') top left repeat-x;}
+#topline li {display:block; float:right; width:50px; height:28px;}
+#topline li a {display:block; width:50px; height:22px; padding-top:6px; font-size:10px;}
+#head {height:125px; background:#003125 url('gfx/head.png') right top no-repeat; margin:0 20px;}
+#logo {}
+#logo a {left:32px; top:38px; overflow:hidden; text-align:center}
+#logo a, #logo a span {display:none; position:absolute; width:281px; height:89px;}
+#logo a span {background:url('gfx/logo.jpg') left top no-repeat;}
+
+/* main menu
+v externim souboru******************************/
+#head .banner {position:absolute; left:504px; top:50px; width:468px; height:60px; overflow:hidden; z-index:10}
+
+/* foot
+******************************/
+
+#foot {display:block; margin:auto; clear:both; width:962px; height:30px; overflow:hidden;
+       background: url('gfx/botline.png') top left repeat-x; position:relative;}
+#foot p {font-weight:bold; padding:7px 0 0 10px;}
+
+
+/* main (= content + sidebar)
+******************************/
+
+#main {font-size:11px;}
+#content {width:755px; float:right;}
+#content-in {padding:25px 43px 28px 20px;}
+#sidebar {width:245px; float:left;}
+#sidebar-in {padding:25px 0 28px 18px;}
+
+/* sidebar (levy panel)
+******************************/
+
+#sidebar .box
+{margin-bottom: 0px; padding-bottom: 19px;
+ background: url('gfx/box_bottom.png') left bottom no-repeat; margin-bottom:20px;}
+
+
+#sidebar .box h2
+{height: 23px; padding: 12px 0 0 21px; text-align: left;
+ background: url('gfx/box_top.png') left bottom no-repeat;}
+
+#sidebar .box .inbox
+{margin: 0px 0 0px 0; padding: 6px 16px 10px 20px; font-size: 11px;
+ background: url('gfx/box_center.png') top left repeat-y;}
+
+#sidebar .box #info img{
+    position: relative;
+
+}
+
+#sidebar .box ul	{list-style: none; line-height: 125%;}
+#sidebar .box p		{margin: 0.5em 0; line-height: 125%;}
+#sidebar .box .inbox	{color: #FFF;}
+
+#sidebar .box #info ul		{margin-top: 8px;}
+#sidebar .box #info ul li .pole	{color: #FFF;}
+#sidebar .box #info img		{float: left; margin: 6px 6px 10px 0px; padding: 0px;}
+
+
+/* content (obsahova cast stranek)
+******************************/
+
+a {color:#FFF; outline:none; }
+
+
+#content h1 {color:#FFF; font-size:17px; font-weight:bold; padding-bottom:4px; border-bottom:1px solid #FFF; margin:0 0 16px 0;}
+#content h2 {color:#FFF; font-size:14px; font-weight:normal; padding-bottom:4px; border-bottom:1px solid #FFF; margin:16px 0 16px 0;}
+#content h3 {color:#FFF; font-size:14px; font-weight:normal; padding-bottom:4px;}
+#content h4 {color:#FFF; font-size:14px; font-weight:bold;}
+#content p, #content ul, #content ol {line-height:150%; margin-bottom:0.7em;}
+#content ul, #content ol {list-style: square inside url()}
+
+.logaras {float: left; padding:0; margin:0; border:none; text-decoration:none}
+
+/* tables
+******************************/
+
+.data1,
+.data2 {background:#92A7A2; padding:1px; border-collapse:separate; border-spacing:1px; margin:10px 0;}
+
+#content table.data1 {}
+
+.data1 th {padding:6px 10px;background:#003125; text-align:left;}
+.data1 th.title {background:#003125 url('gfx/table2.png') top repeat-x;}
+
+.data1 td {padding:6px 10px; background:#003125; text-align:center}
+.data1 tr.event td {background:#92A7A2;}
+
+#content table.data2 {}
+
+.data2 th,
+.data2 td {padding:6px 10px; background:#003125; text-align:left}
+.data2 th.title {background:#003125 url('gfx/table2.png') top repeat-x;}
+
+.data2 tr.even th,
+.data2 tr.even td {background:#92A7A2 url('gfx/table1.png');}
+
+.full {width:100%}
+.full1 {width:670px; float:left}
+.half {width:330px; float:left; margin-right:10px}
+.half1 {float:left; margin-right:10px}
+.half2 {float:left;}
+
+.pre {white-space: pre}
+.small th, .small td {padding:6px 5px}
+
+/* formularove prvky
+******************************/
+
+form {margin:1em 0;}
+form table th {text-align:left; font-weight:normal; padding:4px 4px;}
+form table td {padding:6px 15px;}
+
+input, textarea, button,select {border:2px solid #CCC; background:#003125 right repeat-y; color:#FFF; padding:2px 3px;}
+select {border:2px solid #CCC; background:#003125 url('gfx/menu_active.png') repeat; color:#fff; padding:2px 3px; }
+select option{padding-left:10px;}
+.submit {background:#003125 url('gfx/menu_active.png') right repeat-x; border:2px solid #ccc; color:#FFF; text-decoration:blink; font-weight:bold;padding:4px 10px;} /*Upravuje tla��tko p�epo�tu*/
+input.checkbox {margin-right:10px}
+input:focus, textarea:focus, input.focus, textarea.focus {border:1px solid #FFF; background: #000 url('gfx/inputfocus.png') repeat}
+select:focus,select.focus {border:2px solid #CCC; background: #003125;}
+.simple input.checkbox {padding:0 0 0 0; border-spacing:0 0;}
+
+/* from old styl
+******************************/
+/*posta*/
+.posta_odeslana,.posta_prichozi,.posta_admin,.posta_vudcovska,.posta_ministerska,.posta_generalska{margin:5px;}
+.posta_odeslana td{color:#ffffff;}
+.posta_prichozi td{color:#cc6600;}
+.posta_admin td{color: rgb(1, 186, 255);}
+.posta_vudcovska td{color: #FFFF00;}
+.posta_ministerska td{color: rgb(0, 170, 0);}
+.posta_generalska td{color:brown;}
+
+/*hodnosti*/
+.barva_admin,.barva_admin:visited{color:#01BAFF;}
+.forum_admin{background-color:red;}
+.barva_vudce,.barva_vudce:visited{color:#FFFF00;}
+.barva_vudce_al,.barva_vudce_al:visited{color:orange;}
+.barva_ministr,.barva_ministr:visited{color:#00D400;}
+.barva_zastupce,.barva_zastupce:visited{color:#FFFFFF;}
+.barva_general,.barva_general:visited{color:#B48223;}
+.barva_obcan,.barva_obcan:visited{color:#83a0ff;}
+.barva_vyhnanec,.barva_vyhnanec:visited{color:hotpink}
+.barva_moderator,.barva_moderator:visited{color:#CC0000;}
+.barva_gold,.barva_gold:visited{color:#B09E45;}
+
+/*vztahy*/
+.barva_pakt{color:#00AA00;}
+.barva_spojenectvi{color:#00AA00;}
+.barva_mir{color:white;}
+.barva_neutoceni{color:#9ff;}
+.barva_neutralita{color:yellow;}
+.barva_blokada{color:red;}
+.barva_valka{color:red;}
+
+/*cennosti*/
+.barva_cen_tech{color:#800000;}
+.barva_cen_mis{color:#808000;}
+.barva_cen_pla{color:#339966;}
+.barva_cen_hrd{color:#00FFFF;}
+
+/*antimulti*/
+.am_udan{color:#66FF33;}
+.am_var1{color:#7D7D00;}
+.am_var2{color:#CC6600;}
+.am_var3{color:#CC0000;}
+.am_ocisten{color:#008000;}
+
+/* forum */
+.msg {background: #04231E url('gfx/table1.png') repeat; width: 99%;margin:1em auto;border: 2px solid #CCC;text-align:left;overflow: hidden;}
+.avatar {float: left; padding:0; margin:1.5em 10px; border:none; text-decoration:none}
+.msg_main {background: #04231E; margin:0 0 0 72px; padding:0;border-left: 1px solid #CCC; min-height: 93px;}
+.msg_content {margin:0; padding: 1px 0;font-size: 100%}
+.msg_content p{padding: 0.7em 1em;}
+.msg_title {height:35px; border-bottom: 1px solid #CCC;}
+.msg_title ul {margin:0 1em} .msg_title img {float:left}
+.msg_title li {float: left; list-style: none; width: 20%; white-space: nowrap; overflow: hidden;}
+.msg_title .msg_tit_first {float: left; list-style: none;width: 60%;color: orange;overflow: hidden}
+.msg:hover{background: #04231E url('gfx/inputfocus.png') repeat; border: 2px solid #FFF;}
+.msg_pol {background:#003125; color:white;}
+.msg_pol:hover{background: #600;}
+.forum_admin {background:url('gfx/inputfocus.png') repeat;}
+.forum_admin:hover {background:url('gfx/inputfocus.png') repeat;}
+.refresh{padding-left:18px; margin-left:2px; background:url('gfx/refresh.png') left no-repeat}
+.reload_message{padding-left:18px; margin-left:2px; background: url('gfx/forum_reload_message.png') left no-repeat}
+
+
+/* vysouvac&#195;� submenu pro forum a po&#197;&#161;tu */
+#submenu {position: relative;top: 0;left: 0;height: 2.1em; text-align:center;}
+#submenu .polozka {float: left;}
+#submenu .polozka form, #submenu .polozka table{margin: 0}
+#submenu .zalozka {background: #003125 url('gfx/input.png');color: #FFFFFF;border: 1px solid #CCC;margin: 0 2px 0 0;padding: 1px .5em; font-size: 1.5em;font-weight:bold;cursor:default;}
+#submenu .polozka .zalozka .mala{ font-size:0.8em;margin: 2px 0 0 0;}
+#submenu .zalozka a {color: #FFF;text-decoration: none;}
+#submenu .ramecek {position: absolute;top: 23px;left: 0;width: 662px;padding: 1px;background: #CCC; display:none}
+#submenu .telo {overflow: auto;height: 7.5em;background: #003125 url('gfx/input.png');padding: 7px;}
+#submenu .polozka{behavior: url(./skins/game_new/default/hover.htc); /* pro IE */}
+#submenu .polozkaHover .ramecek, #submenu .polozka:hover .ramecek {display:block}
+#submenu .polozkaHover .zalozka, #submenu .polozka:hover .zalozka {background: #003125 url('gfx/menu_active.png');}
+.cl_popup {margin-top:1em} /* ve forech radeji posunu nize zadavaci formular zprav */
+.cl {clear: both;list-style: none;}
+
+/* posta (ajax)
+******************************/
+
+#contentViewer{border: 1px solid #cff;padding:0 10px;}
+#contentViewer hr{display:block; border: dashed 0.15ex #cff; height: 0.3ex; margin-top: 7px}
+#contentViewer span{float:right}
+
+.ajax-msg {padding:7px 7px 7px 64px; background:url('gfx/msg_dorucena.png') no-repeat 7px 10px}
+.doruc {background:url('gfx/msg_odeslana.png') no-repeat 7px 10px}
+
+
+/* Mapy
+******************************/
+.graf_obsazenosti {
+    border: solid 4px #333333;
+}
+
+
+
+/* Reklamy
+******************************/
+/*lista*/
+.lista1 {
+    font-size: 12px;
+    color: #FFFFFF;
+    font-family: Verdana;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.lista2 {
+    font-size: 11px;
+    color: #FFFFFF;
+    font-family: Verdana;
+    text-decoration: none;
+}
+.lista2:hover {
+    color: red;
+}
+
+
+
+/* posledni upravy
+******************************/
+.pravidla ol li {list-style-type: decimal; list-style-position:outside; margin-left:25px;text-align:justify}
+.menu_stav{margin:0;padding:0;opacity: 0.87;filter:alpha(opacity=87);}
+
+h6 {
+    color: #FFF; margin:0px 0 20px 0px; !important;
+}
+
+/* MENU
+******************************/
+
+
+ul#navmenu {margin:auto !important;
+    background: url('gfx/menu22.png') left top repeat-x !important;} 
+
+/* Root Menu Hover Persistence */
+
+ul#navmenu > li > a:hover,
+ul#navmenu > li:hover > a,
+ul#navmenu > li.iehover > a:hover {
+    background: url('gfx/menu_active.png') left top repeat-x !important; color: white;} /* pro IE */ 
+
+
+/* 2nd Menu */
+ul#navmenu > li:hover > ul > li > a,
+ul#navmenu > li.iehover > ul > li > a {
+    background: url('gfx/submenu.png') left bottom no-repeat !important; color: white; !important;
+}
+
+/* 2nd Menu Hover Persistence */
+ul#navmenu > li:hover > ul > li > a:hover,
+ul#navmenu > li:hover > ul > li:hover > a,
+ul#navmenu > li.iehover > ul > li > a:hover,
+ul#navmenu > li.iehover > ul > li.iehover > a {
+    background:#003125 url('gfx/active_submenu.png') left top repeat-x !important; color: white; !important;
+}
+
+
+/* 3rd Menu */
+ul#navmenu > li:hover > ul > li:hover > ul > li > a,
+ul#navmenu > li.iehover > ul > li.iehover > ul > li> a {
+    background:#003125 url('gfx/submenu.png') left bottom no-repeat !important; color: white;; border: none !important;
+}
+
+
+/* 3rd Menu Hover Persistence */
+ul#navmenu > li:hover > ul > li:hover > ul > li > a:hover,
+ul#navmenu > li:hover > ul > li:hover > ul#drag_ver > li > a:hover,
+ul#navmenu > li.iehover > ul > li.iehover > ul > li > a:hover,
+ul#navmenu > li.iehover > ul > li.iehover > ul#drag_ver > li > a:hover,
+ul#navmenu > li.iehover > ul > li.iehover > ul > li.iehover > a,
+ul#navmenu > li.iehover > ul > li.iehover > ul#drag_ver > li.iehover > a
+{
+    background:#003125 url('gfx/active_submenu.png') left top repeat-x !important; color: white;; border-left: 0px !important; 
+}
+
+/*NOV�!!! - upravuje styl horn�ho panelu se syst�mov�mi ikonami*/
+#fixed_panel{position:fixed;width:100%;height:35px;z-index:95; border-bottom:1px solid #CCC; background:#003125 url('gfx/input.png') repeat;}
+.sg_content{max-width:1000px;height:30px;margin:auto; margin-top:6px;}
+.sg_content ul,.sg_content ul li{display:inline-block;}
+.sg_content ul{float:right}
+.sg_content ul li{width:40px;border-right:1px solid white;}
+.sg_content ul:nth-child(even) li:last-child{border-right:none;}
+.sg_content .left-panel{float:left;}
+#fixed_panel .sg_content .ikony{font-size:1.2em !important;}
+
+/*NOV�!!! �prava ikon v ud�lostech - margin na prvn�m ��dku upravuje odsazen� neaktivn�ch ikon shora, p�i margin 5px jsou v�echny ikony v jedn� linii, krom GOLDA; nev�m, jestli odsazen� neaktivn�ch ikon nen� u� spraveno v hlavn�m stylu*/
+.sg_content ul li i.fas{position:relative; margin: 5px 0}
+.sg_content ul li a.inactive{cursor:default;}
+.sg_content ul li a.inactive i.fas{color:#BBB;}
+.sg_content ul li a.active i.fas{color:#fff;}
+/*div.noob-teacher div.icons{width:100%;text-align:center;}*/
+
+/*NOV�!!! upravuje vlastnosti tla��tek*/
+button, input[type="submit"], 
+.button{position:relative;outline:none; border:2px solid #CCC;font-weight:bold;color: white;background:#003125 url('gfx/menu_active.png') !important;
+padding: 5px;border-radius: 3px;font-size: 0.85em;cursor:pointer;margin: 0 5px;}
+button:hover, input[type="submit"]:hover, .button:hover{border:2px solid #FFF;}
+button:active, input[type="submit"]:active, .button:active{border:2px solid #FFF;}
+
+/*NOV�!!! lvl ukazatel - upravuje vzhled v�ech ukazatel� progresu - level hr��e, upgrady apod. */
+.box_lvl{text-align:center;}
+.box_lvl_progress{height:10px;border-radius:1px;border:1px solid #CCC;overflow:hidden;margin-top:0px;}
+.box_lvl_progress_in{height:100%;display:block;background-image:-webkit-linear-gradient(-45deg,transparent 33%,rgba(0,0,0,.1) 33%,rgba(0,0,0,.1) 66%,transparent 66%),-webkit-linear-gradient(top,rgba(255,255,255,.25),rgba(0,0,0,.25)),-webkit-linear-gradient(left,#92A7A2,#FFF);}
+
+/*NOV�!!! �prava hlavn�ho backgroundu a border� hrdin�*/ 
+.inputRight{float:right;} 
+.sg-row{content:"";display:flex;clear:both;width:100%;flex-wrap: wrap;}
+.sg-row input, .sg-row select, .sg-row label{max-width:95%;}
+.sg-full{width:100%;max-width:100%;flex:100%}  
+.sg-third{width:33%;max-width:33%;flex:33%}  
+.sg-quarter{width:25%;max-width:25%;flex:25%}
+.sg-third.hero-vypis{width:31%;max-width:31%;flex:31%;margin:1%;border-radius:10px 10px 30px 0;padding:5px;background:#003125 url('gfx/input.png') top left;border: 0.1em solid #CCC;box-sizing: border-box;}
+.sg-fifth{width:20%;max-width:20%;flex:20%}
+
+/*NOV�!!! �prava backgroundu a border� spr�vc�*/ 
+.sg-box{padding: 5px; margin: 1% 0;border-radius: 10px 10px 30px 0;background: #003125 url('gfx/input.png');border: 1px solid #CCC;box-sizing: border-box;position:relative;}
+
+/*NOV�!!! v�pis hrdinu - upravuje vlastnosti boxu hrdin� - background popisku, background za ��alou levelu apod*/
+.hero-vypis p{margin-bottom: 0.1em!important;}
+.hero-vypis .sg-row .sg-half{height:76px;max-width:48%;margin:1%;background:#04231E;border-radius:5px;padding:5px;}
+.hero-vypis .sg-row .sg-half img{max-width:100%;}
+.hero-vypis .sg-row{box-sizing: border-box;padding:0 10px;}      
+.hero-vypis .hero-povolani{padding-bottom:5px;}
+.hero-vypis .hero-povolani p{font-size: 1.1em;margin:.3em!important;}
+.hero-vypis .sg-row.hero-info{margin-bottom:10px;}
+.hero-vypis .sg-row.hero-level .hero-level-in{background:#CCC url('gfx/input.png') left;border-radius:5px;padding:5px;width:100%;}
+.hero-vypis .sg-row:first-child{padding-bottom:5px;margin-bottom:5px;}
+.hero-vypis .sg-row:last-child{padding-top:5px;margin-top:5px;}
+.hero-vypis input[type=text]{background:#003125;border: 2px solid #CCC;border-radius:0px;color: white;width:100%;padding:0px;}
+.hero-vypis .box_lvl{margin:5px 0 10px 0;}
+.hero-vypis .box_lvl_progress{background:#003125 url('gfx/input.png');}
+
+/*NOV�!!! �prava tla��tek a backgroundu obr�zku planet na str�nce infrastruktura*/
+/* infrastruktura */
+.sg-box .sg-third{background-color:#04231E; border-radius:5px;width:29.33%;max-width:29.33%;flex:29.33%;margin: 1%;padding:1%;}
+.sg-box .sg-third:first-child{background-position-x: right;background-position-y: top;background-repeat: no-repeat;}
+.sg-box .sg-third.autoBuild{text-align:center;}
+.sg-box .plScroller{position: absolute;top: 20%;;background: #003125;padding: 5px;border: 2px solid #CCC;border-radius: 50%;}
+.sg-box .plScroller.left{left: -15px}
+.sg-box .plScroller.right{right: -15px}
+
+/*NOV�!!! �prava okna rozmis�ov�n� jednotek a pos�l�n� mis�*/
+.sg-modal-content{background: #003125 url('gfx/input.png') repeat;border: .1em solid #CCC;border-top: 1px solid #CCC}
+.sg-modal-content form{margin-bottom:0;}
+#modal-close{position:absolute;right:2px;top:2px;cursor:pointer;background: #003125;border: 2px solid #CCC;border-radius: 50%;width: 20px;height: 20px;text-align: center;}
+select.sg-select{background: #003125 url('gfx/menu_active.png');border: 1px solid #CCC;border-radius: 3px;color: white;padding: 2px 5px;}
+input.sg-input{background: #003125 url('gfx/menu_active.png');border: 2px solid #CCC;border-radius: 3px;color: white;padding: 2px 5px;}
+input:focus, textarea:focus, input.focus, textarea.focus {border:2px solid #FFF; background: #003125 url('gfx/inputfocus.png') repeat}
+
